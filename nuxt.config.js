@@ -4,9 +4,9 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
 
   head: {
-    titleTemplate: '%s - cv-rogersovich',
+    titleTemplate: '%s rogersovich',
 
-    title: 'cv-rogersovich',
+    title: '',
 
     meta: [
       { charset: 'utf-8' },
@@ -16,7 +16,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
     ],
 
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/devil2.svg' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -25,7 +25,11 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
 
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/axios.js' },
+    { src: '~/plugins/persistedState.js' },
+    { src: '~/plugins/TiptapVuetify.js' },
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
 
@@ -37,9 +41,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
 
     '@nuxtjs/eslint-module',
-
-    // https://go.nuxtjs.dev/vuetify
-
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/vuetify',
   ],
 
@@ -47,7 +49,7 @@ export default {
 
   modules: [
     // https://go.nuxtjs.dev/axios
-
+    'vue-sweetalert2/nuxt',
     '@nuxtjs/axios',
   ],
 
@@ -71,5 +73,17 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
 
-  build: {},
+  build: {
+    transpile: ['vuetify/lib', 'tiptap-vuetify'],
+  },
+
+  tailwindcss: {
+    config: {
+      prefix: 'tw-',
+      important: true,
+      theme: {
+        extend: {},
+      },
+    },
+  },
 }

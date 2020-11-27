@@ -12,12 +12,19 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "axios": "^0.21.0",
+    "cookie": "^0.4.1",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "js-cookie": "^2.2.1",
+    "nuxt": "^2.14.6",
+    "tiptap-vuetify": "^2.24.0",
+    "vue-sweetalert2": "^4.1.1",
+    "vuex-persistedstate": "^3.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/tailwindcss": "^3.2.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.10.0",

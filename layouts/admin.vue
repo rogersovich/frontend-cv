@@ -39,7 +39,11 @@
         </v-list>
       </v-list-item-group>
       <template v-slot:append>
-        <v-list-item color="blue accent-2" link>
+        <v-list-item
+          color="blue accent-2"
+          link
+          @click.prevent="$store.dispatch('user/logout')"
+        >
           <v-list-item-icon>
             <v-icon>mdi-logout</v-icon>
           </v-list-item-icon>
@@ -91,7 +95,11 @@
         </v-list>
       </v-list-item-group>
       <template v-slot:append>
-        <v-list-item color="blue accent-2" link>
+        <v-list-item
+          color="blue accent-2"
+          link
+          @click.prevent="$store.dispatch('user/logout')"
+        >
           <v-list-item-icon>
             <v-icon>mdi-logout</v-icon>
           </v-list-item-icon>
@@ -122,7 +130,7 @@
       <strong v-if="$vuetify.breakpoint.mdAndUp" class="mr-4 tw-font-open-sans"
         >Dimas Roger W</strong
       >
-      <v-avatar size="40">
+      <v-avatar size="40" class="tw-cursor-pointer">
         <img
           src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/devil_LdKDxIckuxJv.svg"
           class="tw-inline-block"
@@ -140,6 +148,12 @@
 <script>
 export default {
   name: 'Admin',
+  middleware({ store, redirect }) {
+    // If the user is not authenticated
+    if (!store.state.user.token) {
+      return redirect('/login')
+    }
+  },
   data() {
     return {
       nav: 1,
