@@ -5,7 +5,7 @@
         <h1
           class="tw-font-open-sans font-weight-bold tw-text-xl blue-grey--text text--darken-4"
         >
-          Tabel contact
+          Tabel social
         </h1>
       </v-col>
       <v-col md="6" class="text-right">
@@ -15,14 +15,14 @@
           depressed
           dark
           rounded
-          :to="{ name: 'admin-contact-add' }"
+          :to="{ name: 'admin-social-add' }"
         >
           Add
           <v-icon> mdi-plus </v-icon>
         </v-btn>
       </v-col>
       <v-col md="12">
-        <admin-contact-form-table></admin-contact-form-table>
+        <admin-social-form-table></admin-social-form-table>
       </v-col>
     </v-row>
   </v-container>
@@ -31,7 +31,7 @@
 <script>
 export default {
   async asyncData({ store }) {
-    await store.dispatch('contact/getContacts')
+    await store.dispatch('social/getSocials')
     await store.dispatch('toggleErrors', [])
   },
 }

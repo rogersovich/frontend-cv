@@ -165,6 +165,7 @@ export default {
           url: 'admin-dashboard',
         },
         { title: 'Contact', icon: 'mdi-image', url: 'admin-contact' },
+        { title: 'Social', icon: 'mdi-image', url: 'admin-social' },
       ],
     }
   },

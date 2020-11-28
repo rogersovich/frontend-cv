@@ -19,10 +19,9 @@ export const getContact = async function ({ commit }, payload) {
 export const storeContact = async function ({ dispatch }, payload) {
   try {
     await this.$axios.post(END_POINT, {
-      title: payload.title,
-      phone: payload.phone,
       email: payload.email,
-      description: payload.description,
+      number_phone: payload.number_phone,
+      link_cv: payload.link_cv,
     })
     dispatch('toggleErrors', [], { root: true })
     this.$swal({
@@ -30,7 +29,7 @@ export const storeContact = async function ({ dispatch }, payload) {
       title: 'Data Added',
       timer: 500,
     })
-    this.$router.push({ name: 'adminVconex-contact' })
+    this.$router.push({ name: 'admin-contact' })
   } catch (error) {
     if (error.response.status === 422) {
       dispatch('toggleErrors', error.response.data.errors, { root: true })
@@ -41,10 +40,9 @@ export const storeContact = async function ({ dispatch }, payload) {
 export const updateContact = async function ({ dispatch }, payload) {
   try {
     await this.$axios.put(`${END_POINT}/${payload.id}`, {
-      title: payload.title,
-      phone: payload.phone,
       email: payload.email,
-      description: payload.description,
+      number_phone: payload.number_phone,
+      link_cv: payload.link_cv,
     })
     dispatch('toggleErrors', [], { root: true })
     this.$swal({
@@ -52,7 +50,7 @@ export const updateContact = async function ({ dispatch }, payload) {
       title: 'Data Updated',
       timer: 500,
     })
-    this.$router.push({ name: 'adminVconex-contact' })
+    this.$router.push({ name: 'admin-contact' })
   } catch (error) {
     if (error.response.status === 422) {
       dispatch('toggleErrors', error.response.data.errors, { root: true })
