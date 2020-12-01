@@ -23,7 +23,7 @@
               name: 'admin-contact-id',
               params: { id: row.item.id },
             }"
-            class="m-2"
+            class="m-2 focus:tw-outline-none"
           >
             <v-icon>mdi-pencil</v-icon>
           </v-btn>
@@ -31,7 +31,7 @@
             fab
             x-small
             color="error"
-            class="m-2"
+            class="m-2 focus:tw-outline-none"
             @click="confirm(row.item)"
           >
             <v-icon>mdi-delete</v-icon>

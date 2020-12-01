@@ -12,7 +12,7 @@
             depressed
             dark
             color="#6C63FF"
-            class="tw-font-open-sans tw-normal-case tw-font-semibold tw-text-base tw-tracking-wide"
+            class="tw-font-open-sans tw-normal-case tw-font-semibold tw-text-base tw-tracking-wide focus:tw-outline-none"
           >
             Get started early
           </v-btn>
