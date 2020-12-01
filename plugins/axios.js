@@ -1,5 +1,5 @@
 export default function ({ $axios, store, redirect, $swal }) {
-  $axios.setBaseURL('http://127.0.0.1:8000/api')
+  $axios.setBaseURL('https://backend-rogersovich-cv.herokuapp.com/api')
 
   $axios.onRequest((config) => {
     const user = store.state.user
