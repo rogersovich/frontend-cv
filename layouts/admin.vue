@@ -116,7 +116,7 @@
         v-if="$vuetify.breakpoint.mdAndUp"
         class="text-center tw-font-open-sans font-weight-bold tw-text-4xl blue-grey--text text--darken-4"
       >
-        <span class="indigo--text text--accent-2">Vconex</span> Squad
+        <span class="indigo--text text--accent-2">Stan</span> Is Me
       </v-toolbar-title>
       <v-toolbar-title
         v-if="$vuetify.breakpoint.smAndDown"
@@ -164,8 +164,27 @@ export default {
           icon: 'mdi-view-dashboard',
           url: 'admin-dashboard',
         },
-        { title: 'Contact', icon: 'mdi-image', url: 'admin-contact' },
-        { title: 'Social', icon: 'mdi-image', url: 'admin-social' },
+        { title: 'Contact', icon: 'mdi-phone', url: 'admin-contact' },
+        {
+          title: 'Social',
+          icon: 'mdi-transit-connection-variant',
+          url: 'admin-social',
+        },
+        {
+          title: 'Project',
+          icon: 'mdi-file-code',
+          url: 'admin-project',
+        },
+        {
+          title: 'Soft Skill',
+          icon: 'mdi-diving-helmet',
+          url: 'admin-softSkill',
+        },
+        {
+          title: 'Hard Skill',
+          icon: 'mdi-ship-wheel',
+          url: 'admin-hardSkill',
+        },
       ],
     }
   },
