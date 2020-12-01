@@ -22,7 +22,9 @@
     >
       <template v-slot:item="row">
         <tr>
-          <td>{{ row.index + 1 }}</td>
+          <td>
+            {{ row.index + from }}
+          </td>
           <td>{{ row.item.email }}</td>
           <td>{{ row.item.number_phone }}</td>
           <td>{{ row.item.link_cv }}</td>
@@ -44,7 +46,7 @@
               x-small
               color="error"
               class="m-2 focus:tw-outline-none"
-              @click="confirm(row.item)"
+              @click="removeItem(row.item.id)"
             >
               <v-icon>mdi-delete</v-icon>
             </v-btn>
@@ -57,9 +59,10 @@
 
 <script>
 import serverSideTable from '~/mixins/serverSideTable'
+import removeItem from '~/mixins/removeItem'
 
 export default {
-  mixins: [serverSideTable],
+  mixins: [serverSideTable, removeItem],
   data() {
     return {
       headers: [
@@ -71,24 +74,6 @@ export default {
       ],
       url: 'contacts',
     }
-  },
-  methods: {
-    confirm(data) {
-      this.$swal({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!',
-      }).then((result) => {
-        if (result.value) {
-          this.$store.dispatch('contact/removeContact', data.id)
-          this.$swal('Deleted!', 'Item Deleted', 'success')
-        }
-      })
-    },
   },
 }
 </script>

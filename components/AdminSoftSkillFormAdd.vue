@@ -10,16 +10,14 @@
         <span class="tw-font-medium">Title</span>
       </template>
     </v-text-field>
-    <v-text-field
-      v-model="form.description"
-      autocomplete="off"
-      hint="For example, flowers or used cars"
-      :error-messages="$store.state.errors.description"
-    >
-      <template v-slot:label>
-        <span class="tw-font-medium">Description</span>
-      </template>
-    </v-text-field>
+    <div>
+      <label class="tw-font-medium tw-text-gray-700">Description</label>
+      <text-editor
+        v-model="form.description"
+        :error-messages="$store.state.errors.description"
+        class="mt-2"
+      ></text-editor>
+    </div>
     <v-file-input
       v-model="form.image"
       type="file"

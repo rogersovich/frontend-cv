@@ -2,6 +2,7 @@ const serverSideTable = {
   data() {
     return {
       items: [],
+      currentPage: 1,
       totalItems: 0,
       from: 0,
       loading: false,
@@ -24,6 +25,7 @@ const serverSideTable = {
       this.items = data.data
       this.totalItems = data.total
       this.from = data.from
+      this.currentPage = data.current_page
     },
     async searchData() {
       if (this.search === '') {
