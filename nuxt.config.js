@@ -67,8 +67,7 @@ export default {
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-
-    theme: {},
+    treeShake: true,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -82,7 +81,17 @@ export default {
       prefix: 'tw-',
       important: true,
       theme: {
-        extend: {},
+        extend: {
+          fontFamily: {
+            montserrat: ['Montserrat'],
+            'open-sans': ['Open Sans'],
+          },
+          textColor: {
+            main: '#071E48',
+            secondary: '#939BC1',
+            accent: '#005AFF',
+          },
+        },
       },
     },
   },

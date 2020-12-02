@@ -1,11 +1,11 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <h1>Rogersovich</h1>
-      </div>
-    </v-col>
-  </v-row>
+  <v-container fluid class="py-0">
+    <card-home></card-home>
+    <card-soft-skill></card-soft-skill>
+    <card-hard-skill></card-hard-skill>
+    <card-project></card-project>
+    <card-contact></card-contact>
+  </v-container>
 </template>
 
 <script>
