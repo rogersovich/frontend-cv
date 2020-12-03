@@ -9,5 +9,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ store }) {
+    await store.dispatch('contact/getContact', 3)
+    await store.dispatch('hardSkill/getHardSkills')
+    await store.dispatch('softSkill/getSoftSkills')
+    await store.dispatch('project/getProjects')
+    await store.dispatch('social/getSocials')
+  },
+}
 </script>
