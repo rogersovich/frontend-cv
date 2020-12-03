@@ -1,18 +1,52 @@
 <template>
-  <v-row align="center" class="fill-height tw-h-screen background-contact">
+  <v-row
+    align="center"
+    justify="center"
+    class="fill-height tw-h-screen background-contact"
+  >
     <v-col cols="12" sm="12" md="12">
-      <h1 class="tw-uppercase tw-text-2xl tw-font-montserrat tw-font-bold">
-        <span class="tw-text-accent"> Hello, </span>
-        <span class="tw-text-main">im dimas roger</span>
-      </h1>
-      <h1
-        class="tw-uppercase tw-text-5xl tw-font-open-sans tw-font-bold tw-text-main"
-      >
-        Web Developer
-      </h1>
-      <h3 class="tw-font-open-sans tw-text-secondary">
-        Fresh graduate & Easily to blend
-      </h3>
+      <v-card flat class="pa-5 mx-auto" max-width="600">
+        <v-card-subtitle
+          class="text-center tw-text-base tw-text-main tw-font-montserrat tw-font-medium"
+        >
+          Trying to hire me ?
+          <span class="tw-text-accent"> Say Hello At </span>
+          <h1 class="tw-tracking-wide tw-font-normal tw-text-2xl mt-1">
+            dimasroger89@gmail.com
+          </h1>
+        </v-card-subtitle>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" sm="12" md="12">
+      <v-card flat class="mx-auto px-6 text-center" max-width="400">
+        <v-card-text>
+          <v-avatar size="50" class="mx-3">
+            <v-img
+              contain
+              src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/devil_LdKDxIckuxJv.svg"
+            ></v-img>
+          </v-avatar>
+          <v-avatar size="50" class="mx-3">
+            <v-img
+              contain
+              src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/devil_LdKDxIckuxJv.svg"
+            ></v-img>
+          </v-avatar>
+          <v-avatar size="50" class="mx-3">
+            <v-img
+              contain
+              src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/devil_LdKDxIckuxJv.svg"
+            ></v-img>
+          </v-avatar>
+          <v-avatar size="50" class="mx-3">
+            <v-img
+              contain
+              src="https://ik.imagekit.io/1akf8cdsyg/cv-rogersovich/Assets/devil_LdKDxIckuxJv.svg"
+            ></v-img>
+          </v-avatar>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
