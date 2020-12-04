@@ -41,7 +41,7 @@
                 :show-arrows="false"
                 hide-delimiter-background
                 delimiter-icon="mdi-minus"
-                height="300"
+                height="400"
               >
                 <v-hover
                   v-for="(data, i) in $store.state.project.projects.data"
@@ -59,7 +59,7 @@
                       <div
                         v-if="hover"
                         class="d-flex justify-center align-center transition-fast-in-fast-out blue accent-2 v-card--reveal display-3 tw-text-capitalize white--text"
-                        style="height: 350px"
+                        style="height: 400px"
                       >
                         {{ data.title }}
                       </div>
